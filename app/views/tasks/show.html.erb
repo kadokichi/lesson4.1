@@ -1,0 +1,29 @@
+<table>
+        <tr>
+          <th>タイトル</th>
+          <td><%= @task.title %></td>
+        </tr>
+
+        <tr>
+          <th>開始日</th>
+          <td><%= @task.start_day %></td>
+        </tr>
+
+        <tr>
+          <th>終了日</th>
+          <td><%= @task.end_day %></td>
+        </tr>
+
+        <tr>
+          <th>終日</th>
+          <td><%= @task.all_day %></td>
+        </tr>
+
+        <tr>
+          <th>スケジュールメモ</th>
+          <td><%= @task.description %></td>
+        </tr>
+
+</table>
+<%= link_to "編集", [:edit,@task] %>
+<%= link_to "タスク一覧に戻る", :tasks %>
