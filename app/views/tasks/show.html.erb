@@ -1,4 +1,6 @@
-<table>
+<div class="containner" >
+    <div class="main_content">
+      <table>
         <tr>
           <th>タイトル</th>
           <td><%= @task.title %></td>
@@ -6,17 +8,23 @@
 
         <tr>
           <th>開始日</th>
-          <td><%= @task.start_day %></td>
+          <td><%= @task.start_day.strftime("%Y/%m/%d") %></td>
         </tr>
 
         <tr>
           <th>終了日</th>
-          <td><%= @task.end_day %></td>
+          <td><%= @task.end_day.strftime("%Y/%m/%d") %></td>
         </tr>
 
         <tr>
           <th>終日</th>
-          <td><%= @task.all_day %></td>
+          <td>
+            <% if @task.all_day == true %>
+                ◯
+            <% else %>
+
+            <% end %>
+          </td>
         </tr>
 
         <tr>
@@ -24,6 +32,11 @@
           <td><%= @task.description %></td>
         </tr>
 
-</table>
-<%= link_to "編集", [:edit,@task] %>
-<%= link_to "タスク一覧に戻る", :tasks %>
+      </table>
+
+      <div class="select_button">
+         <%= link_to "タスク一覧に戻る", :tasks, class: "btn btn-secondary btn-lg" %>
+         <%= link_to "編集", [:edit,@task], class: "btn btn-info btn-lg" %>
+      </div>
+    </div>
+</div>

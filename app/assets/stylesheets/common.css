@@ -1,0 +1,68 @@
+.containner {
+    display: block;
+    max-width: 1000px;
+    width: 100%;
+    padding: 30px 100px;
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center;
+}
+
+.main_content {
+    width: 100%;
+    padding: 0 100px;
+    display: block;
+    text-align: center;
+}
+
+.main_content th {
+    width: 300px;
+}
+
+.main_content td {
+    width: 300px;
+}
+
+header {
+    text-align: center;
+    background-color: orange;
+    color: white;
+}
+
+table th {
+    border: 2px solid;
+    width: 140px;
+    text-align: center;
+    background-color: rgb(227, 221, 53);
+}
+
+table td {
+    border: 1px solid;
+    text-align: center;
+}
+
+.total_schedule {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.select_button {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+h3 {
+    padding-bottom: 30px;
+}
+
+button {
+    color: white;
+}
+
+.no-mark {
+    list-style: none;
+}

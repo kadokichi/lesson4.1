@@ -1,7 +1,12 @@
-<h3>予定の新規追加</h3>
+<div class="containner" >
+  <h3>予定の新規追加</h3>
 
-<%= form_with model: @task do |f| %>
-    <table>
+  <%= render "layouts/datepicker" %>
+  <%= render "shared/error", obj: @task %>
+  
+  <div class="main_content">
+    <%= form_with model: @task do |f| %>
+      <table>
         <tr>
           <th><%= f.label :title, "タイトル" %></th>
           <td><%= f.text_field :title %></td>
@@ -9,17 +14,17 @@
 
         <tr>
           <th><%= f.label :title, "開始日" %></th>
-          <td><%= f.text_field :start_day %></td>
+          <td><%= f.date_field :start_day %></td>
         </tr>
 
         <tr>
           <th><%= f.label :title, "終了日" %></th>
-          <td><%= f.text_field :end_day %></td>
+          <td><%= f.date_field :end_day %></td>
         </tr>
 
         <tr>
           <th><%= f.label :title, "終日" %></th>
-          <td><%= f.check_box :all_day  %></td>
+          <td><%= f.check_box :all_day  %>  終日の場合はチェック</td>
         </tr>
 
         <tr>
@@ -27,12 +32,11 @@
           <td><%= f.text_area :description %></td>
         </tr>
 
-    </table>
-
-    <script>
-        $('#start_day').datepicker();
-    </script>
-
-    <%= f.submit"登録" %>
-    <%= link_to "タスク一覧に戻る", :tasks %>
-<% end %>
+      </table>
+      <div class="select_button">
+          <%= link_to "タスク一覧に戻る", :tasks, class: "btn btn-secondary btn-lg" %>
+          <%= f.submit"登録", class: "btn btn-success btn-lg" %>
+      </div>
+    <% end %>
+  </div>
+</div>

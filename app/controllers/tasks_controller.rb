@@ -41,21 +41,5 @@ class TasksController < ApplicationController
         redirect_to :tasks
         flash[:notice] = "#{@task.title}を削除しました"
     end
-
-    def start_day
-        strftime("%Y年/%m月/%d日")
-    end
-
-    def end_day
-        strftime("%Y年/%m月/%d日")
-    end
-
-    def all_day
-        if @task.all_day == true
-            ◯
-        else
-            
-        end
-    end
     
 end
